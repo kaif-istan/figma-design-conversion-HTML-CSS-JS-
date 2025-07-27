@@ -1,0 +1,561 @@
+:root {
+  --orange-color: #da722c;
+  --dark-blue-color: #023047;
+  --dark-color: #070917;
+  --light-color: #e8f7fb;
+  --light-blue-color: #6f7dfb;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0; /*This may cause problem*/
+  font-family: "Poppins", sans-serif;
+}
+
+.btn {
+    padding: 16px 32px;
+    border-radius: 32px;
+    background-color: var(--orange-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px; /* space between icon and text */
+  }
+
+.btn.dark{
+    background: var(--dark-blue-color);
+}
+
+.btn.light{
+    background: var(--orange-color);
+}
+
+.btn.enroll-icon{
+    padding-left: 20px;
+}
+
+
+
+.btn .icon {
+    width: 18px; /* or match the Figma dimensions */
+    height: 18px;
+    object-fit: contain;
+  }
+
+.wrapper{
+    max-width: 1134px;
+    margin: 0 auto;
+}
+
+ header {
+    background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+    height: 100vh;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 1134px;
+    top: 0;
+    padding: 10px;
+    z-index: 1000;
+    transition: all 500ms ease;
+}
+
+
+
+nav.scrolled {
+    background: var(--dark-color);
+    box-shadow: 0px 16px 14px -8px rgba(0, 0, 0, 0.3);
+    border-radius: 0px 0px 8px 8px;
+    top: 0;
+    padding: 2px;
+}
+
+
+nav .logo {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffff;
+}
+
+
+.hero-section{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.hero-section .left {
+    flex: 1;
+}
+
+.hero-section .left h1 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 125%;
+    color: #ffff;
+    margin-bottom: 0;
+    margin-top: 60px;
+}
+
+.hero-section .left p {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 200%;
+    color: #ffff;
+    margin-bottom: 30px;
+    width: 457px;
+}
+
+
+
+.hero-section .right {
+    align-self: flex-end;
+}
+
+
+.hero-section .right img {
+    position: relative;
+    height: 582px;
+    width: 446px;
+    vertical-align: middle;
+    left: 61px;
+}
+
+.achievement-card {
+    position: absolute;
+    min-width: 200px;
+}
+
+.achievement-card .content {
+    border-radius: 24px;
+    background: #fff;
+    padding: 8px 32px;
+    z-index: 10;
+    position: relative;
+    
+}
+
+.achievement-card.student-enrolled {
+    left: 49%;
+    top: 270px;
+}
+
+
+.achievement-card .content h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: var(--dark-blue-color);
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+
+  .achievement-card .content p {
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    margin-top: -8px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: var(--dark-blue-color);
+  }
+
+  .achievement-card .bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 8px;
+    left: 8px;
+    background: linear-gradient(180deg, #6f7dfb, #3b448f 100%);
+    border-radius: 24px;
+    z-index: 1;
+  }
+
+
+.achievement-card.overall-rating {
+    left: 47%;
+    top: 470px;
+}
+
+.achievement-card .content div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+
+section {
+    margin-top: 100px;
+}
+
+h2 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 120%;
+    margin: 0;
+    color: var(--dark-blue-color)
+}
+
+
+h2.light {
+    color: #ffff;
+}
+
+section p {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 200%;
+    color: var(--dark-blue-color);
+    margin: 12px 0px;
+}
+
+
+.testimonials-section {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+
+
+.testimonials-section .testimonial-card::before {
+    content: "";
+    width: 28px;
+    position: absolute;
+    height: 40px;
+    top: -40px;
+    left: 60px;
+    background: var(--dark-blue-color);
+    border-radius: 24px 24px 0 0 ;
+}
+
+
+.testimonials-section .testimonial-card:last-child::before {
+    left: 40px;
+    top: -50px;
+    border-radius: 0 0 24px 24px;
+    height: calc(100% + 90px);
+    z-index: -1;
+}
+
+.testimonials-section .testimonial-card {
+    width: 442px;
+    background: #ffff;
+    box-shadow: 0px 9px 36px rgba(0, 0, 0, 0.5);
+    border-radius: 24px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.testimonials-section .mobile-btn {
+    display: none;
+}
+
+.testimonials-section .testimonial-card .content{
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 150%;
+    color: #ffff;
+    border-radius: 24px;
+    padding: 24px 32px;
+    background: var(--light-blue-color);
+}
+
+
+.testimonials-section .testimonial-card:last-child .content{
+    background: var(--orange-color);
+}
+
+.testimonials-section .testimonial-card .info h4 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 120%;
+    color: #ffff;
+    margin: 0;
+    color: var(--dark-blue-color);
+}
+
+
+.testimonials-section .testimonial-card .info {
+    padding: 24px 32px;
+    background: #fff;
+    border-radius: 24px 24px;
+}
+
+.testimonials-section .testimonial-card .info p {
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120%;
+    color: var(--dark-blue-color);
+}
+
+.testimonials-section .testimonial-card img {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    right: 32px;
+    bottom: 20px;
+}
+
+
+.testimonials-section .testimonial-card:last-child {
+    transform: translateX(20px);
+}
+
+
+.testimonials-section .features {
+    margin-bottom: 30px;
+}
+
+
+
+.courses-section {
+    background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+    padding: 70px 0px;
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 120px;
+}
+
+
+.courses-section h2 {
+    text-align: center;
+}
+
+.courses-section .course-cards {
+    display: flex;
+    gap: 70px;
+}
+
+
+.courses-section .course-cards img {
+    width: 100%;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+    border-radius: 24px;
+}
+
+
+.courses-section .course-card {
+    background: #ffff;
+    border-radius: 24px;
+    padding: 0px 32px;
+    margin: 40px 0px;
+    position: relative;
+}
+
+.courses-section .course-card::after {
+    position: absolute;
+    content: "";
+    height: 8px;
+    color: var(--dark-blue-color);
+    left: 32px;
+    right: 32px;
+    bottom: 0;
+    border-radius: 24px;
+}
+
+
+.courses-section .course-card h3 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 150%;
+    color: var(--dark-blue-color);
+}
+
+.courses-section .course-card .info {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.courses-section .course-card .duration {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 150%;
+    white-space: nowrap;
+    color: var(--dark-blue-color);
+    position: relative;
+    padding-left: 20px;
+}
+
+.courses-section .course-card .duration::before {
+    content: url('images/Clock.svg');
+    position: absolute;
+    top: 2px;
+    left: -6px;
+}
+
+.courses-section .wrapper {
+    position: relative;
+}
+
+
+.courses-section .btn {
+    position: absolute;
+    right: 0;
+}
+
+
+.app-section {
+    text-align: center;
+}
+
+.app-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.app-section .app-btn {
+    display: flex;
+    background-color: #000000;
+    padding: 20px 30px;
+    color: #ffff;
+    align-items: center;
+    gap: 14px;
+    min-width: 310px;
+    margin-top: 20px;
+}
+
+
+.app-section .app-btn span {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    color: #ffff;
+    ;
+}
+
+
+footer {
+    background: var(--dark-color);
+    color: #ffff;
+    padding: 70px 0;
+    margin-top: 100px;
+}
+
+
+footer a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+
+footer h3 {
+    color: var(--orange-color);
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+footer ul li {
+    margin: 16px 0;
+}
+
+footer .links-container{
+    display: grid;
+    grid-template-columns: 2fr 2fr 3fr;
+}
+
+footer .social {
+    margin-left: 24px;
+}
+
+footer .social a {
+    margin-right: 28px;
+    margin-top: 16px;
+}
+
+footer form {
+    margin-left: 24px;
+    margin-top: 26px;
+    position: relative;
+}
+
+
+footer form input {
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 200%;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    color: #000000;
+}
+
+
+footer form .submit-btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--dark-blue-color);
+    border-radius: 8px;
+    padding: 0px 32px;
+    border: 0;
+    color: #ffff;
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 200%;
+    width: 135px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+footer .copyright {
+    margin-top: 36px;
+}
